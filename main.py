@@ -1,12 +1,11 @@
 from sanic import Sanic
-from sanic.response import json
 from sanic_jwt import Initialize
 from uvloop import Loop
-from werkzeug.utils import ImportStringError, find_modules, import_string
+from werkzeug.utils import find_modules, import_string
 
 from config import config
 from views.request import Request
-from sanic_session import AIORedisSessionInterface, Session
+from sanic_session import Session
 from tortoise.contrib.sanic import register_tortoise
 
 
